@@ -20,15 +20,6 @@ data = {}
 interrupted = False
 tick = 0
 
-# add your own quotes here!
-quotes = [
-    "awesome program 9000",
-    "it's a beautiful day outside... i hope",
-    "i forgot",
-    "borlando",
-    "wario",
-]
-
 async def prep():
     if "lastsunset" not in data:
         data['lastsunset'] = 1e12
@@ -134,7 +125,6 @@ async def main():
     
     signal.signal(signal.SIGINT, sigint_handler)
     os.system("cls")
-    print(quotes[random.randint(1, len(quotes))-1])
     while not interrupted:
         datetimenow = datetime.datetime.now(tz=city.tzinfo)
         now = datetimenow.timestamp()
