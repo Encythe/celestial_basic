@@ -1,4 +1,5 @@
 # celestial_basic
+
 celestial_basic is a small light-weight CLI "program" that shows the current time, sunrise, and sunset at your location.
 to use, you need to install the `astral` using `pip`.
 ```pip install astral```
