@@ -20,17 +20,13 @@ data = {}
 interrupted = False
 tick = 0
 
+# add your own quotes here!
 quotes = [
-    "what the fuck",
     "awesome program 9000",
     "it's a beautiful day outside... i hope",
-    "fuck you! nobody gives a shit!",
     "i forgot",
-    "its a fucking program",
-    "once upon a time, sex?",
     "borlando",
     "wario",
-    "cock, cock, cock? cock."
 ]
 
 async def prep():
