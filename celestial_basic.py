@@ -157,7 +157,7 @@ async def main():
         tpsls = " " * (19-len(tps.split(" // ")[0]))
         date = f"{tempnow.year}-{tempnow.month < 10 and "0" or ""}{tempnow.month}-{tempnow.day < 10 and "0" or ""}{tempnow.day}"
         datespace = " "*(20-len(date))
-        # os.system("cls")
+        os.system("cls")
         st = (
             f'┌───────────────────────────────────────────┐\n'
             f'│          schedule for {date}{datespace}│\n'
@@ -174,7 +174,6 @@ async def main():
             f'└───────────────────────────────────────────┘'
         )
         print(st)
-        print("\x1B[14A")
         
         if data['retry_in'] > 0:
             data['retry_in'] -= now-tick
@@ -184,6 +183,6 @@ async def main():
         if sunset < now:
             data['lastsunset'] = sunset
         
-        await asyncio.sleep(0.01)
+        await asyncio.sleep(0.1)
 
 asyncio.run(main())
